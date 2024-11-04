@@ -17,16 +17,16 @@ https://github.com/Aman23000/SDP_Assignment_4.git
 # Implementation Description 
 
 - Explain the level of flexibility in your implementation, including how new object types can be easily added or removed in the future.
-Ans : Flexibility is a priority in the implementation's design. If more old systems need to be maintained in the future, the Adapter Pattern makes it simple to incorporate new data retrieving techniques. The Repository Pattern, on the other hand, centralizes data management, making it possible to easily update or change the way customer records are kept without affecting the system as a whole.
+  Ans : Flexibility is a priority in the implementation's design. If more old systems need to be maintained in the future, the Adapter Pattern makes it simple to incorporate new data retrieving techniques. The Repository Pattern, on the other hand, centralizes data management, making it possible to easily update or change the way customer records are kept without affecting the system as a whole.
 
 - Discuss the simplicity and understandability of your implementation, ensuring that it is easy for others to read and maintain.
-Ans : The code is organized to guarantee readability and simplicity. According to the single-responsibility principle, each class and interface has a distinct duty, which makes the codebase easier to read and manage. Using interfaces (`CustomerDataUsb` and `CustomerDataHttps`) makes it possible to test various implementations separately and encourages a clear division of responsibilities.
+  Ans : The code is organized to guarantee readability and simplicity. According to the single-responsibility principle, each class and interface has a distinct duty, which makes the codebase easier to read and manage. Using interfaces (`CustomerDataUsb` and `CustomerDataHttps`) makes it possible to test various implementations separately and encourages a clear division of responsibilities.
 
 - Describe how you have avoided duplicated code and why it is important.
-Ans : The design makes use of interfaces and patterns to prevent code duplication. To mimic `CustomerDataHttps` without repeating the data retrieval logic, the `CustomerDataUsbAdapter` class modifies the `CustomerDataUsb` implementation. Any modifications needed for USB or HTTPS retrieval can be made in one location by separating data retrieval logic in interfaces, guaranteeing reusability and reducing maintenance.
+  Ans : The design makes use of interfaces and patterns to prevent code duplication. To mimic `CustomerDataHttps` without repeating the data retrieval logic, the `CustomerDataUsbAdapter` class modifies the `CustomerDataUsb` implementation. Any modifications needed for USB or HTTPS retrieval can be made in one location by separating data retrieval logic in interfaces, guaranteeing reusability and reducing maintenance.
 
 - If applicable, mention any design patterns you have used and explain why they were chosen.
-Ans :
+  Ans : 
 - **Adapter Pattern** : The modern HTTPS-based data retrieval system is integrated with the outdated USB-based system using this method. To facilitate smooth data access between systems, the `CustomerDataUsbAdapter` class adapts `CustomerDataUsb` to the `CustomerDataHttps` interface.
 - **Repository Pattern** : The modern HTTPS-based data retrieval system is integrated with the outdated USB-based system using this method. To facilitate smooth data access between systems, the `CustomerDataUsbAdapter` class adapts `CustomerDataUsb` to the `CustomerDataHttps` interface.
 
