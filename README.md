@@ -1,30 +1,38 @@
 
 | CS-665       | Software Design & Patterns |
 |--------------|----------------------------|
-| Name         | FIRST_NAME LAST_NAME       |
-| Date         | MM/DD/YYYY                 |
-| Course       | Fall / Spring / Summer     |
-| Assignment # |                            |
+| Name         | Aman Jain                  |
+| Date         | 11/02/2024                 |
+| Course       | Fall 2024                  |
+| Assignment # | 4                          |
 
 # Assignment Overview
-Please add a paragraph or two overviewing the objectives of the assignment.
+The objective of this assignment is to create a customer data management system that integrates data from both legacy USB-based and modern HTTPS-based data retrieval systems. This project demonstrates the use of the Adapter Pattern to unify data retrieval, making it possible to access legacy USB data as if it were modern HTTPS data. Additionally, the Repository Pattern is used to manage customer records, providing a centralized location for data storage and retrieval. This project highlights design patterns and testing best practices in software design.
+
+# GitHub Repository Link: https://github.com/Aman23000/SDP_Assignment_4.git
 
 # GitHub Repository Link:
-https://github.com/{YOUR_USERNAME}/cs-665-assignment-{ASSIGNMENT_NUMBER}
+https://github.com/Aman23000/SDP_Assignment_4.git
 
 # Implementation Description 
 
+- Explain the level of flexibility in your implementation, including how new object types can be easily added or removed in the future.
+### Flexibility
+Ans : Flexibility is a priority in the implementation's design. If more old systems need to be maintained in the future, the Adapter Pattern makes it simple to incorporate new data retrieving techniques. The Repository Pattern, on the other hand, centralizes data management, making it possible to easily update or change the way customer records are kept without affecting the system as a whole.
 
-For each assignment, please answer the following:
+- Discuss the simplicity and understandability of your implementation, ensuring that it is easy for others to read and maintain.
+### Simplicity and Understandability
+Ans : The code is organized to guarantee readability and simplicity. According to the single-responsibility principle, each class and interface has a distinct duty, which makes the codebase easier to read and manage. Using interfaces (`CustomerDataUsb` and `CustomerDataHttps`) makes it possible to test various implementations separately and encourages a clear division of responsibilities.
 
-- Explain the level of flexibility in your implementation, including how new object types can
-be easily added or removed in the future.
-- Discuss the simplicity and understandability of your implementation, ensuring that it is
-easy for others to read and maintain.
 - Describe how you have avoided duplicated code and why it is important.
-- If applicable, mention any design patterns you have used and explain why they were
-chosen.
+### Code Reusability and Avoidance of Duplication
+Ans : The design makes use of interfaces and patterns to prevent code duplication. To mimic `CustomerDataHttps` without repeating the data retrieval logic, the `CustomerDataUsbAdapter` class modifies the `CustomerDataUsb` implementation. Any modifications needed for USB or HTTPS retrieval can be made in one location by separating data retrieval logic in interfaces, guaranteeing reusability and reducing maintenance.
 
+- If applicable, mention any design patterns you have used and explain why they were chosen.
+### Design Patterns
+Ans : 
+- **Adapter Pattern** : The modern HTTPS-based data retrieval system is integrated with the outdated USB-based system using this method. To facilitate smooth data access between systems, the `CustomerDataUsbAdapter` class adapts `CustomerDataUsb` to the `CustomerDataHttps` interface.
+- **Repository Pattern** : The modern HTTPS-based data retrieval system is integrated with the outdated USB-based system using this method. To facilitate smooth data access between systems, the `CustomerDataUsbAdapter` class adapts `CustomerDataUsb` to the `CustomerDataHttps` interface.
 
 # Maven Commands
 
