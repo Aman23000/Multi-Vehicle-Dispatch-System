@@ -1,18 +1,6 @@
-
-| CS-665       | Software Design & Patterns |
-|--------------|----------------------------|
-| Name         | Aman Jain                  |
-| Date         | 11/02/2024                 |
-| Course       | Fall 2024                  |
-| Assignment # | 4                          |
-
-# Assignment Overview
 The objective of this assignment is to create a customer data management system that integrates data from both legacy USB-based and modern HTTPS-based data retrieval systems. This project demonstrates the use of the Adapter Pattern to unify data retrieval, making it possible to access legacy USB data as if it were modern HTTPS data. Additionally, the Repository Pattern is used to manage customer records, providing a centralized location for data storage and retrieval. This project highlights design patterns and testing best practices in software design.
 
 # GitHub Repository Link: https://github.com/Aman23000/SDP_Assignment_4.git
-
-# GitHub Repository Link:
-https://github.com/Aman23000/SDP_Assignment_4.git
 
 # Implementation Description 
 
